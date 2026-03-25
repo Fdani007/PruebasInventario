@@ -1,0 +1,79 @@
+:root {
+  color-scheme: light;
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --primary: #0f766e;
+  --primary-soft: #ccfbf1;
+  --danger: #b91c1c;
+  --border: #e2e8f0;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  padding-bottom: calc(84px + env(safe-area-inset-bottom));
+}
+.app-header {
+  position: sticky;
+  top: 0;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 16px 10px;
+  z-index: 10;
+}
+h1 { margin: 0; font-size: 1.3rem; }
+.subtle { color: var(--muted); font-size: .9rem; margin: 4px 0 0; }
+.app-main { padding: 16px; max-width: 760px; margin: 0 auto; }
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 12px;
+}
+.row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.row-between { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+input, select, button, textarea {
+  font: inherit;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  padding: 12px;
+  width: 100%;
+}
+button { font-weight: 600; min-height: 44px; }
+.btn-primary { background: var(--primary); color: #fff; border-color: var(--primary); }
+.btn-secondary { background: var(--primary-soft); color: #0f172a; border-color: transparent; }
+.btn-danger { background: #fee2e2; color: var(--danger); border-color: transparent; }
+.btn-inline { width: auto; padding: 10px 12px; min-height: 40px; }
+.bottom-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  background: var(--card);
+  border-top: 1px solid var(--border);
+  padding: 10px 10px calc(10px + env(safe-area-inset-bottom));
+}
+.nav-btn.active { background: var(--primary); color: white; }
+.list-item { padding: 10px 0; border-bottom: 1px solid var(--border); }
+.list-item:last-child { border-bottom: none; }
+.tag {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #f1f5f9;
+  font-size: .8rem;
+  margin-right: 6px;
+}
+.modal { border: none; border-radius: 12px; width: min(720px, 95vw); }
+.modal::backdrop { background: rgba(15, 23, 42, .45); }
+.empty { color: var(--muted); text-align: center; padding: 20px 0; }
+.small { font-size: .85rem; color: var(--muted); }

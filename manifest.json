@@ -1,0 +1,23 @@
+{
+  "name": "Inventario PWA Offline",
+  "short_name": "Inventario",
+  "description": "Sistema de inventario offline-first con IndexedDB",
+  "start_url": "./index.html#/home",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#0f766e",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "./icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "./icons/icon-maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}
