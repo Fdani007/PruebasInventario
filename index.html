@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0f766e" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Inventario PWA" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="apple-touch-icon" href="./icons/icon.svg" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Inventario PWA</title>
+  </head>
+  <body>
+    <header class="app-header">
+      <h1>Inventario</h1>
+      <p id="syncStatus" class="subtle">Offline-first listo</p>
+    </header>
+
+    <nav class="bottom-nav">
+      <button data-route="#/home" class="nav-btn">Tipos</button>
+      <button data-route="#/products" class="nav-btn">Productos</button>
+      <button data-route="#/settings" class="nav-btn">Ajustes</button>
+    </nav>
+
+    <main id="app" class="app-main" aria-live="polite"></main>
+
+    <dialog id="modal" class="modal"></dialog>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
